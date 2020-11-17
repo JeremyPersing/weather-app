@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather App</title>
+        <link rel='stylesheet' href='styles.css'>
+        <script src='script.js'></script>
+    </head>
+    <body>
+        <div class="grid">
+            <div id="header" class="searchArea">
+                <h1 class="text-center">Daily Weather</h1>
+                <div id="inputs" class="location-center">
+                    <div class="location-input">
+                        <label for='cityInput'>City</label><br>
+                        <input type='text' size="30" id='cityInput'>
+                    </div>
+                    <div class="location-input">
+                        <label for='stateInput'>State</label><br>
+                        <input type='text' id='stateInput' size="30" placeholder="Leave Empty if no state">
+                    </div>
+                    <div class="location-input">
+                        <label for='countryInput'>Country</label><br>
+                        <input type='text' size="30" id='countryInput'>
+                    </div>
+                    <button id="searchButton" onclick="getWeather()">Search</button> 
+                </div>
+            </div>  
+            <div id="weatherDiv" class="dailyForecast text-center"></div>
+            <div id="forecastDiv" class="weeklyForecast"></div>
+        </div>
+    </body>
+</html>

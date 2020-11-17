@@ -1,0 +1,122 @@
+/* Elements */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #19201c;
+    color: #f0ece2;
+    font-size: large;
+}
+
+button {
+    cursor: pointer;
+    font-size: large;
+    padding: 10px;
+}
+
+input {
+    background: f0ece2;
+    color: rgb(12, 12, 12);
+    padding: 10px;
+    margin: 10px;
+    font-size: large;
+}
+
+/* Classes */
+.text-center {
+    text-align: center;
+}
+
+.searchArea {
+    grid-area: search;
+}
+
+.dailyForecast {
+    grid-area: daily-forecast;
+    margin-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.weeklyForecast {
+    grid-area: weekly-forecast;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns:  auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        ". search ."
+        ". daily-forecast ."
+        ". weekly-forecast .";
+}
+
+.thumbnail {
+    border: 1px solid #f0ece2;
+    width: 120px;
+    text-align: center;
+}
+
+.thumbnailList {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+/* Ids */
+#convertButton {
+    color: #898989;
+    padding-left: 10px;
+}
+
+#convertButton:hover {
+    color: #b7b7b7;
+    cursor: pointer;
+}
+
+#inputs {
+    display: flex;
+    justify-content: center;
+}
+
+#searchButton {
+    background: #f0ece2;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-bottom: 10px;
+}
+
+#tempDiv {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    #inputs {
+        display: block;
+        margin: auto;
+        width: 350px;
+    }
+
+    #searchButton {
+        display: inherit;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+@media only screen and (max-width: 950px) {
+    .thumbnailList {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .thumbnailList {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
